@@ -132,7 +132,13 @@ If you need to create file `install.sh` manually inside Jenkins container, may y
 apt-get update && apt-get install -y nano
 ```
 
-**`Remember to run command `aws configure` to set up an IAM account for Jenkins, right after the script has finished running.`**
+**`Remember to run command: `**
+
+```sh
+aws configure
+```
+
+**`to set up an IAM account for Jenkins, right after the script has finished running.`**
 
 ## 3. Automatically create and install a Docker server
 
@@ -171,9 +177,15 @@ Next, you will need to install the Ansible plugin.
 
 Now, the last step is that you create a Jenkins Multibranch Pipeline like the image below, connect to your repository using the credential that you created in step [3.2.1](#321-jenkins-credentials).
 
+**`Also, remember to replace the region inside`** [Jenkinsfile](./Jenkinsfile) **`at line 58.`**
+
 ![05-create-jenkins-pipeline](./images/05-create-jenkins-pipeline.jpg)
 
-And that's it. Pipeline worked.
+And that's it. Pipeline worked. Images for pipeline run:
+
+![06-pipeline-run-1](./images/06-pipeline-run-1.jpg)
+
+![07-pipeline-run-2](./images/07-pipeline-run-2.jpg)
 
 ## 4. Process flow in this sample
 
