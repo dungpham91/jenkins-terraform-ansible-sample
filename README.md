@@ -187,6 +187,8 @@ And that's it. Pipeline worked. Images for pipeline run:
 
 ![07-pipeline-run-2](./images/07-pipeline-run-2.jpg)
 
+![08-pipeline-run-3]
+
 ## 4. Process flow in this sample
 
 - `Step 1`: on your local computer, you use the Terraform [s3-backend](./s3-backend/) folder to create an S3 bucket, the purpose of which is to store the remote state for the main Terraform code - used to create EC2.

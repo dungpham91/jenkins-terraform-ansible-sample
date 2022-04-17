@@ -29,3 +29,7 @@ apt-get install -y ansible
 # Disable host checking in Ansible
 ansible --version
 echo "host_key_checking = False" > ~/.ansible/ansible.cfg
+cat > ~/.ssh/config <<"EOF"
+Host *
+    StrictHostKeyChecking no
+EOF
