@@ -187,7 +187,7 @@ And that's it. Pipeline worked. Images for pipeline run:
 
 ![07-pipeline-run-2](./images/07-pipeline-run-2.jpg)
 
-![08-pipeline-run-3]
+![08-pipeline-run-3](./images/08-pipeline-run-3.jpg)
 
 ## 4. Process flow in this sample
 
