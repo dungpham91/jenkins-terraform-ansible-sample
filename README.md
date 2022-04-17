@@ -26,8 +26,8 @@ Some of the goals of this sample:
         - [3.2.2 Jenkins plugins](#322-jenkins-plugins)
         - [3.2.3 Create Jenkins Multibranch Pipeline](#323-create-jenkins-multibranch-pipeline)
 - [4. Process flow in this sample](#4-process-flow-in-this-sample)
-- [5. Software version](#5-software-version)
-
+- [5. Clean everything](#5-clean-everything)
+- [6. Software version](#6-software-version)
 
 ## 1. Create S3 bucket to store state
 
@@ -189,6 +189,14 @@ And that's it. Pipeline worked. Images for pipeline run:
 
 ![08-pipeline-run-3](./images/08-pipeline-run-3.jpg)
 
+![09-pipeline-run-4](./images/09-pipeline-run-4.jpg)
+
+![10-pipeline-run-5](./images/10-pipeline-run-5.jpg)
+
+![11-pipeline-run-6](./images/11-pipeline-run-6.jpg)
+
+![12-pipeline-run-7](./images/12-pipeline-run-7.jpg)
+
 ## 4. Process flow in this sample
 
 - `Step 1`: on your local computer, you use the Terraform [s3-backend](./s3-backend/) folder to create an S3 bucket, the purpose of which is to store the remote state for the main Terraform code - used to create EC2.
@@ -212,7 +220,23 @@ And that's it. Pipeline worked. Images for pipeline run:
 
 - `Step 6`: Once all deployed, there will be a step asking if you want to delete the EC2 that was just installed. If you click OK then Jenkins will execute the job and delete it.
 
-## 5. Software version
+## 5. Clean everything
+
+After you're done with the lab, you'll need to delete the resources to save money.
+
+- EC2 will be deleted through the Jenkins pipeline so you don't need to do anything with it anymore.
+
+- S3 bucket to do remote backend, you need to delete it by going to [s3-backend](./s3-backend/) directory and typing the command:
+
+    ```sh
+    terraform destroy
+    ```
+
+    ![13-terraform-destroy](./images/13-terraform-destroy.jpg)
+
+- Delete the Jenkins server, this you can do manually just like when you created it.
+
+## 6. Software version
 
 |  Software |  Version |
 |---|---|
