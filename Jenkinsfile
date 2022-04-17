@@ -72,6 +72,7 @@ pipeline {
 
     stage('Run Ansible') {
       steps {
+        sh 'export ANSIBLE_HOST_KEY_CHECKING=False'
         ansiblePlaybook(credentialsId: 'ec2.ssh.key	', inventory: 'aws_hosts', playbook: 'ansible/docker.yml')
       }
     }
